@@ -1,15 +1,22 @@
+/*
+ *File:transaction.cpp
+ *Developer: Angel Castaneda
+ *Email: angelc5954@student.vvc.edu
+ *Description: Transaction class will take and print the day it is, the ammount entered, and the description of that transaction.
+*/
+
 #include<iostream>
 #include<vector>
 #include"transaction.h"
 #include<string>
 
-Transaction::Transaction()
+Transaction::Transaction() //default constructor
 {
     day = 0;
     ammount = 0.0;
 }
 
-void Transaction::read()
+void Transaction::read()  //reads in the inputed day, ammount, and description
 {
     std::string description;
     std::cout << "Enter the day: ";
@@ -20,17 +27,17 @@ void Transaction::read()
     std::getline(std::cin, description);
 }
 
-int Transaction::get_day()
+int Transaction::get_day() //returns the day
 {
     return day;
 }
 
-double Transaction::get_ammount()
+double Transaction::get_ammount() //returns the ammount
 {
     return ammount;
 }
 
-void Transaction::print() const
+void Transaction::print() const //prints the day, ammount, and description for that day.
 {
     std::cout << "Day: " << day << std::endl;
     std::cout << "Ammount: " << ammount << std::endl;
