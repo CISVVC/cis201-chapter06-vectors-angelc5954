@@ -22,7 +22,7 @@ std::vector<double> Transactionlog::get_daily_balances() //This collects the bal
     double balance = 0.0;
     for(int i = 0; i < MAX_DAY; i++)
         {
-            balance += get_transaction_total_for_day(i);
+            balance += get_transaction_total_for_day(i + 1);
             daily_balances.push_back(balance);
         }
     return daily_balances;

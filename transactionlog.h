@@ -21,7 +21,7 @@ class Transactionlog
     public:
         Transactionlog(double, double); 
         std::vector<double> get_daily_balances();
-        double get_transaction_total_for_day(std::vector<Transaction> &t);
+        double get_transaction_total_for_day(std::vector<Transaction>& );
         void print_daily_balance();  
 };
 
